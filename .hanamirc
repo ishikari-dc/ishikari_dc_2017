@@ -1,0 +1,3 @@
+project=ishikari_dc_2017
+test=minitest
+template=erb

@@ -1,0 +1,37 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: "ishikari_dc_2017"
+    ports:
+      - "2300:2300"
+    command: bundle exec hanami server --host 0.0.0.0
+    volumes:
+      - .:/home/ishikari_dc_2017
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+
+  front:
+    build: ./apps/web/front/.
+    container_name: "ishikari_dc_2017_front"
+    ports:
+      - "8080:8080"
+    command: yarn start
+    volumes:
+      - ./apps/web/front:/home/ishikari_dc_2017/apps/web/front
+
+  db:
+    image: mysql:5.7
+    container_name: "mysql"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+volumes:
+  mysql-data:
+

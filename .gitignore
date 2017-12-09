@@ -1,0 +1,4 @@
+/public/assets*
+/tmp
+/apps/web/node_modules
+/apps/web/dist/**
