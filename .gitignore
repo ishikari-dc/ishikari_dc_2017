@@ -1,4 +1,4 @@
 /public/assets*
 /tmp
-/apps/web/node_modules
-/apps/web/dist/**
+/apps/web/front/node_modules
+/apps/web/front/dist/**
