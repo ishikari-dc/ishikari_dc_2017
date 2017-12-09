@@ -1,33 +1,16 @@
-# Ishikari Dc 2017
+# Set Up
 
-Welcome to your new Hanami project!
-
-## Setup
-
-How to run tests:
+install ![Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
 
 ```
-% bundle exec rake
+docker-compose build
+docker-compose up
+
+# デーモン化したい時
+docker-compose up -d
 ```
 
-How to run the development console:
-
-```
-% bundle exec hanami console
-```
-
-How to run the development server:
-
-```
-% bundle exec hanami server
-```
-
-How to prepare (create and migrate) DB for `development` and `test` environments:
-
-```
-% bundle exec hanami db prepare
-
-% HANAMI_ENV=test bundle exec hanami db prepare
-```
-
-Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://hanamirb.org/docs/1.0.0/), or jump in [chat](http://chat.hanamirb.org) for help. Enjoy! 🌸
+# Ver
+- Ruby:2.4.2-alpine
+- node:9.1.0-alpine
+- MySQL:5.7
