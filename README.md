@@ -1,6 +1,6 @@
 # Set Up
 
-install ![Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
+install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
 
 ```
 docker-compose build
