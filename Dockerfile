@@ -6,16 +6,12 @@ WORKDIR $APP_ROOT
 RUN apk update && \
     apk add \
       build-base \
-      curl-dev \
       libxml2-dev \
       libxslt-dev \
       linux-headers \
       mysql-dev \
-      nodejs \
-      ruby-dev \
       tzdata \
-      yaml \
-      yaml-dev
+      yaml
 
 COPY . $APP_ROOT
 
