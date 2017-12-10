@@ -3,7 +3,6 @@ module Web::Controllers::Pitchs
     include Web::Action
 
     def call(params)
-      @foo = 111
       redirect_to 'http://localhost:8080'
     end
   end
