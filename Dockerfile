@@ -4,14 +4,17 @@ ARG APP_ROOT=/home/ishikari_dc_2017
 WORKDIR $APP_ROOT
 
 RUN apk update && \
-    apk add \
+    apk --update add \
       build-base \
       libxml2-dev \
       libxslt-dev \
       linux-headers \
       mysql-dev \
+      ruby-dev \
       tzdata \
-      yaml
+      yaml \
+      yaml-dev && \
+      rm -rf /var/cache/apk/*
 
 COPY . $APP_ROOT
 
