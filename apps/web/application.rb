@@ -91,6 +91,7 @@ module Web
       # Argument: A symbol representation of a mime type, defaults to :html
       #
       # default_request_format :html
+      default_request_format :json
 
       # Default format for responses that don't consider the request format
       # Argument: A symbol representation of a mime type, defaults to :html
